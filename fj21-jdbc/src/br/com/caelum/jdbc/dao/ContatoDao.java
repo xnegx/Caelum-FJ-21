@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import br.com.caelum.jdbc.ConnectionFactory;
@@ -43,9 +44,35 @@ public class ContatoDao {
 		
 	}
 
-	public List<Contato> getList() {
+	public List<Contato> getLista() {
 		try {
-			List<Contato> contatos = new ArrayList
+			List<Contato> contatos = new ArrayList<Contato>();
+			PreparedStatement stmt = this.connection.
+					prepareStatement("select * from contatos");
+			ResultSet rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				//criando o objeto Contato
+				Contato contato = new Contato();
+				contato.setId(rs.getLong("id"));
+				contato.setNome(rs.getString("nome"));
+				contato.setEmail(rs.getString("email"));
+				contato.setEndereco(rs.getString("endereco"));
+				
+				//montando a data atraves do calendar
+				Calendar data = Calendar.getInstance();
+				data.setTime(rs.getDate("dataNascimento"));
+				contato.setDataNascimento(data);
+				
+				//adicionando o objeto a lista
+				contatos.add(contato);
+				
+			}
+			rs.close();
+			stmt.close();
+			return contatos;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
 		}
 	}
 }
