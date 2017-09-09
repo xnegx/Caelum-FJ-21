@@ -1,0 +1,6 @@
+<html>
+	<body>
+		<h2>Pagina inicial da Lista de Tarefas</h2>
+		<p>Bem vindo, ${UsuarioLogado.login}</p>
+	</body>
+</html>

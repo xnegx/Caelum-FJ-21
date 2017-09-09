@@ -1,0 +1,7 @@
+<html>
+	<body>
+		<h2>Pagina inicial da Lista de Tarefas</h2>
+		<p>Bem vindo, ${UsuarioLogado.login}</p>
+		<a href="ListaTarefas">Clque aqui</a> para acessar a lista de tarefas
+	</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.caelum.tarefas.interceptor.Interceptor&apos; to &apos;AutorizadorInterceptor&apos;&#x0A;- Original project: &apos;fj21-tarefas&apos;&#x0A;- Original element: &apos;br.com.caelum.tarefas.interceptor.Interceptor&apos;&#x0A;- Renamed element: &apos;br.com.caelum.tarefas.interceptor.AutorizadorInterceptor&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Interceptor&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.com.caelum.tarefas.interceptor{Interceptor.java[Interceptor" matchStrategy="1" name="AutorizadorInterceptor" qualified="false" references="true" similarDeclarations="false" stamp="1504978757859" textual="false" version="1.0"/>
+</session>
